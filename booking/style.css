@@ -1,0 +1,68 @@
+:root{
+    --dark-blue: #000c37;
+    --white: #ffffff;
+    --white-gray: #e0e0e0;
+    --gold: #ff8a00;
+    --gray: #717171;
+    --green-background: #24ff00;
+    --green-text: #0c5d00;
+    --red-background: #ff9a9a;
+    --red-text: #ff0000;
+}
+
+body{
+    margin:0px;
+    box-sizing: border-box;
+    background: linear-gradient(to right,var(--white-gray), var(--white));
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,var(--white-gray), var(--white));
+    margin: auto;
+}
+
+.tab-btns-con{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(102, 102, 102);
+}
+.tab-btns-con button{
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    background-color: yellow;
+}
+
+.tab-con{
+    display: flex;
+    height: 500px;
+    
+}
+
+.tab{
+    width: 100%;
+}
+
+.tab1{
+
+    background: linear-gradient(to left,var(--white-gray), var(--white));
+}
+.tab2{
+    display: none;
+    background: linear-gradient(to left,var(--white-gray), var(--white));
+}
+.tab3{
+    display: none;
+    background: linear-gradient(to left,var(--white-gray), var(--white));
+}
+
+.tab4{
+    display: none;
+    background: linear-gradient(to left,var(--white-gray), var(--white));
+}

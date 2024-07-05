@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+:root{
+	--dark-blue: #000c37;
+    --white: #ffffff;
+    --white-gray: #e0e0e0;
+    --gold: #ff8a00;
+    --gray: #717171;
+    --green-background: #24ff00;
+    --green-text: #0c5d00;
+    --red-background: #ff9a9a;
+    --red-text: #ff0000;
+}
+
+ 
+ *{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: 0px; padding: 0;
+   outline: none; border: none;
+   text-decoration: none;
+   transition: .2s linear;
+
+ }
+ body{
+	background: linear-gradient(to right,var(--white-gray), var(--white));
+	
+ }
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+
+/*Styling search bar*/
+
+
+	
+.search{
+	height: 40px;
+	display: flex;
+	cursor: pointer;
+	padding: 10px 20px;
+	background: #000C37;
+	border-radius: 300px;
+	align-items: center;
+	width: 500px;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+
+	}
+	
+.search:hover input{
+
+			width: 500px;
+			color: white;
+			font-size: 2rem;
+			text-align: center;
+			
+
+}
+
+.search input{
+			width: 200px;
+			outline: none;
+			border: none;
+			color: white;
+			text-align: center;
+			transition: 0.8s;
+			background: transparent;
+
+}
+
+
+.search a .fas{
+
+			color: white;
+			font-size: 18px;
+			
+
+
+			}
+
+/* Styling the filter Option Bar */
+.filter{
+		padding: 20px;
+		max-width: 600px;
+		
+		
+
+
+	}
+	
+.filter-option{
+
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+
+
+
+
+			}
+	
+	/* End Styling the filter Option Bar */
+
+	
+	
+	
+	
+	
+	
+	
+.box{
+	max-width: 400px;
+}
+	
+
+.text-box{
+		
+		width: 90px;
+		background-color: #000C37;
+		padding: 10px;
+		display: inline-block;
+		text-align: center;
+		color: #FFE500;
+		border-radius: 20px;
+
+		}
+		
+span p{
+	padding: 10px;
+	text-align: center;
+	font-family: rockwell;
+	padding: 10px;
+		
+	}	
+  
+
+section .hostel-listings{
+    padding: 4rem 15%;
+}
+
+
+.hostel-listings .box-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 2rem;    
+	margin: 10px;
+}
+
+.hostel-listings .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.hostel-listings .box-container .box.shadow{
+    box-shadow: 0px 10px 39.1px 6.9px rgba(0, 0, 0, 0.34) !important;
+	border-radius: 10px;
+}
+
+
+.hostel-listings .box-container .box .image{
+    height: 18rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hostel-listings .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+     
+}
+
+.hostelnames{
+	color: #000C37;
+	text-align: center;
+	
+	 }
+	
+.hostel-listings .box-container .box .image h3{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    padding: .5rem 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+
+.hostel-listings .box-container .box .content{
+    padding: 2rem;
+}
+
+.hostel-listings .box-container .box .content h3{
+    font-size: 2rem;
+}
+
+.hostel-listings .box-container .box .content p{
+    
+    padding: 10px;
+    
+}
+
+
+/*styling content 1 class*/
+
+.hostel-listings .box-container .box .content1{
+    padding: 2rem;
+	background-color: #FF8A00;
+}
+
+.hostel-listings .box-container .box .content1 h3{
+    font-size: 2rem;
+}
+
+.hostel-listings .box-container .box .content1 p{
+    
+    padding: 10px;
+    
+}
+
+/* Styling content 2 class*/
+
+.hostel-listings .box-container .box .content2{
+    padding: 2rem;
+	background-color: #24FF00;
+}
+
+.hostel-listings .box-container .box .content2 h3{
+    font-size: 2rem;
+}
+
+.hostel-listings .box-container .box .content2 p{
+    
+    padding: 10px;
+    
+}
+
+
+
+  .container{
+    font-size: 12px;
+   font-family: calibri;
+}
+
+
+/* Styling Footer */
+.circle{
+
+		background: white;
+		border-radius: 2px;
+		width: 100px;
+
+		}
+		
+.footer {
+		background-color: #2E2E2E;
+		padding: 20px;
+		
+		}
+.maincircle{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	
+}
+.circle{
+
+			width: 70px;
+			height: 70px;
+			margin-top: 8px;
+			border-radius: 55%;
+			margin-bottom: 30px;
+			margin-left: 20px;
+		}
+		
+.fcontent {
+		font-size: 2rem;
+		color: #FFE500;
+		
+		}
+		
+		
+/* Media queries */
+
+@media only screen and (max-width: 600px){
+	html{
+		font-size: 60%;
+	  }
+
+	.search{
+		height: 30px;
+		display: flex;
+		border-radius: 300px;
+		width: 300px;
+	
+		}
+
+		.hostel-listings .box-container{
+				grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;    
+		}
+	.search a .fas{
+
+		font-size: 15px;
+		}
+		.text-box{
+		
+			width: 98px;
+        padding: 10px 1px;
+        border-radius: 15px;
+		
+		
+			
+			}
+
+
+
+}
+
+
+/* Responsive with Smaler screens */
+
+@media only screen and (max-width: 430px){
+
+	.hostel-listings .box-container{
+		grid-template-columns: repeat(1, 1fr);
+	gap: 1rem;    
+}
+}
+
+
+
+@media only screen and (max-width: 360px){
+
+	.search{
+		width: 200px;
+	}
+	.search:hover input{
+
+		width: 200px;
+		font-size: 1.5rem;
+		
+
+}
+}
+
+@media only screen and (max-width: 320px){
+
+	.search{
+		width: 200px;
+	}
+	.search:hover input{
+
+		width: 200px;
+		font-size: 1.5rem;
+}
+
+.text-box{
+		
+	width: 95px;
+	border-radius: 20px;
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 

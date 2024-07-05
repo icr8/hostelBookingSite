@@ -1,0 +1,688 @@
+    *{
+    
+    margin: 0px;
+    padding: 0px;
+    font-family: arial;
+
+    
+}
+
+:root{
+    --dark-blue: #000c37;
+    --white: #ffffff;
+    --white-gray: #e0e0e0;
+    --gold: #ff8a00;
+    --gray: #717171;
+    --green-background: #24ff00;
+    --green-text: #0c5d00;
+    --red-background: #ff9a9a;
+    --red-text: #ff0000;
+}
+
+body{
+    background: linear-gradient(to right,var(--white-gray), var(--white));
+}
+
+#wrapper-div{
+    
+    width: 100%;
+    min-height: 400px;
+    
+    background-image: url("pictures/6.webp");
+    background-color: var(--dark-blue);
+    background-blend-mode: soft-light;
+    background-position: center;
+    background-size: contain;
+    padding-bottom: 30px;
+    
+}
+
+
+
+a{
+    
+    text-decoration: none;
+}
+
+
+.message{
+    width: fit-content;
+    height: 30px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    opacity: 60%;
+}
+
+.message p{
+    margin-top: 5px;
+}
+
+.error{
+    background-color: var(--red-background);
+    color: var(--red-text);
+}
+.success{
+    background-color: var(--green-background);
+    color: var(--green-text);
+}
+
+
+.nav-bar{
+    display: flex;
+    
+    padding: 20px 0px;
+}
+
+.menumain{
+    margin-left: 60%;
+}
+
+.menu{
+    font-size: x-large;
+    margin-left:60%;
+    margin-top: 10px;
+    
+}
+
+.menu button{
+    display: none;
+   background: transparent;
+}
+.menulist{
+    font-size: x-large;
+    margin-top: 20px;
+}
+
+#ITE{
+    text-align: center;
+    
+    font-size: 55px;
+    color:white;
+}
+
+
+
+#is{
+    text-align: center;
+    color: #fff;
+}
+#btt{
+    color: black;
+    padding:20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    background-color:#FFE500;
+    
+    
+}
+#btt:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+#pic{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+
+
+}
+ #p1{
+    color:#000000;
+    font-size: larger;
+    margin-top: 20px;
+    
+ }
+#p2  {
+    color: var(--gray);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: larger;
+}
+#p0{
+    margin-bottom: 15px;
+    margin-top: 16px;
+}
+#p3{
+    margin-top: 17px;
+    color: #717171;
+}
+
+/* picture frame styling */
+
+.picFrame{
+
+    width: 300px;
+    height: fit-content;
+    border: 2px solid var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.picture{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    
+}
+
+
+#test {
+
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+/*main body*/
+.main{
+width: 75%;
+margin: auto;
+padding: 40px 0px;
+
+}
+
+#test1 {
+
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+                    
+#foot{
+    color: white;
+    height: 100%;
+    background-color: #2E2E2E;
+    min-height: 200px;
+    padding: 20px 0px;
+}
+#tes {
+
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+
+#btt1{
+    color: black;
+    padding:20px;
+    font-size:20px;
+    border-radius: 150px;
+    border-style: none;
+    background-color:#FFE500;
+    width:200px;
+    margin-bottom: 20px;
+    
+}
+
+#btt1:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+ #con{
+    color: #fff;
+    margin-top: 40px;
+    font-weight: 20px;
+    font-size: 25px;
+ }
+ #con1{
+    color:yellow;
+    margin: 0px;
+ }
+ #con3{
+    color: yellow;
+    
+ }
+ #name{
+    color: orangered;
+}
+#hit{
+    color:#000C37 ;
+    font-size: 20px;
+}
+#lif{
+    color:#fff;
+    margin-left:30px;
+    
+   
+}
+
+
+
+#lif:hover{
+    color: yellow;
+    transition: 500ms;
+}
+
+
+
+/*  carousel css code    */
+.testimonials-container {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100%;
+    
+    overflow: hidden;
+    border-color: #101010;
+    height: 350px;
+    
+  }
+
+  .testimonial {
+    width:600px;
+    display: none;
+    gap: 5px;
+    margin-left: 350px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #2E2E2E;
+    color: #fff;
+    height: 300px;
+  }
+#area{
+    background-color: #101010;
+    width: 100%;
+    height: 400px;
+    padding: 30px 0px;
+}
+#are{
+    color: #fff;
+    margin-left: 30px;
+    margin: 10px;
+}
+  .author {
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  /* Carousel Animation */
+  .carousel {
+    animation: slide 1s ;
+  }
+
+  @keyframes slide {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+    
+  }
+
+  .cardImage{
+    width: 60%;
+  }
+
+  .hostelName{
+    width: 100%;
+    height: 20%;
+    color: var(--green-background);
+
+  }
+.cardDetails{
+    width: 100%;
+}
+  .inCard{
+    display: flex;
+    width: 100%;
+    height: 25%;
+    background-color: var(--gray);
+    margin-bottom: 5px;
+    padding:2px 2px;
+  }
+
+  .cardlink:hover{
+    background-color: var(--gold);
+    
+  }
+
+  .value{
+    color: yellow ;
+  }
+
+
+#caro{
+    
+    width: 80%;
+    height:100%;
+}
+
+ /*  Second page css code      */
+ 
+ .loginSignup-con{
+    width: 30%;
+    margin: auto;
+    padding-top: 40px;
+}
+.Spage{
+    width: 100%;
+    
+}
+ 
+ #vat{
+    
+    color: var(--dark-blue);
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    
+    
+}
+
+.loginSignupbtn-con{
+   
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#fbit{
+    background-color: var(--dark-blue);
+    color: #fff;
+    
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    width: 300px;
+    height: 60px;
+    transition: 1s;
+}
+
+#sbutt{
+    background-color: var(--dark-blue);
+    color:   white;
+    margin-top: 20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style:solid;
+    width: 300px;
+    height: 60px;
+transition: 1s;
+    
+}
+
+.re{
+    color: var(--dark-blue);
+    font-weight: lighter;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.re a{
+    text-decoration: underline;
+}
+
+.re a:hover{
+    color: var(--gold);
+}
+
+#lip{
+    
+    color:#717171 ;
+    margin-top: 20px;
+    font-size: 15px;
+    
+    
+}
+
+#lii{
+    color: #717171;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+#fbit:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    
+}
+#sbutt:hover{
+    background-color: var(--dark-blue);
+    color: #c6eb0a ;
+    cursor: pointer;
+    
+    
+    
+}
+
+
+/*  SignUp page css code      */
+
+h1{
+
+margin-top: 20px;
+margin-bottom: 20px;
+
+}
+.fin{
+    padding:20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px;
+    border-color: var(--dark-blue);
+}
+#fin1{
+    padding:20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px;
+    border-color: var(--dark-blue);
+}
+#fin2{
+    padding:20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px;
+    border-color: var(--dark-blue);
+}
+#fin3{
+    padding:20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px;
+    border-color: var(--dark-blue);
+}
+#fin4{
+    padding:20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px;
+    border-color: var(--dark-blue);
+}
+.fin5{
+    padding:20px;
+    font-size:20px;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: var(--dark-blue);
+    margin: 10px;
+}
+
+
+#agr{
+    
+    margin: 10px;
+}
+
+.login-con{
+    padding-top: 0px;
+}
+
+#sbutt2{
+    background-color:var(--dark-blue);
+    color: #fff  ;
+    margin: 20px;
+    padding:20px;
+    font-size:30px;
+    border-radius: 30px;
+    border-style:solid;
+    width: 300px;
+transition: 2s;
+border-color: var(--dark-blue);
+    
+}
+#sbutt2:hover{
+    background-color:#fff;
+    color: var(--dark-blue);
+    margin: 20px;
+    padding:20px;
+    font-size:40px;
+    border-radius: 30px;
+    border-style:solid;
+    width: 300px;           
+    cursor: pointer;
+    border-color: var(--dark-blue);
+}
+
+
+.fieldset{
+    padding: 10px 20px;
+    color: var(--gold);
+    font-weight: bolder;
+    border-color: var(--dark-blue);
+}
+
+
+
+.admin{
+    margin-top: 50px;
+}
+
+
+/*Mobile responsive*/
+@media all  and (Max-width: 600px) {
+
+    #wrapper-div{
+        min-height: 300px;
+    }
+    
+    .menumain{
+        margin-left:40%;
+    }
+
+    .menu{
+       
+        margin-left:160%;
+        margin-top: 0px;
+        
+        
+    }
+    
+    .menu button{
+        display: block;
+        
+       
+    }
+
+    #menuBtn{
+        display: block;
+    }
+
+    #closeBtn{
+        display: none;
+    }
+
+    .menulist{
+        background-color: rgb(9, 10, 25);
+        width: fit-content;
+        height: fit-content;
+        box-shadow: 0px 0px 100px rgb(9, 245, 48);
+        display: none;
+        position: absolute;
+        right: 0;
+        
+        flex-direction: column;
+        font-size: x-large;
+        animation: menuOpen 300ms ;
+        
+    }
+
+    @keyframes menuOpen {
+        0% { opacity: 0; transform: translateX(50px); }
+        100% { opacity: 1; transform: translateX(0); }
+        
+      }
+      @keyframes menuClose {
+        0% { opacity: 1; transform: translateX(0); }
+        100% { opacity: 0; transform: translateX(50px); }
+        
+      }
+
+    .menulist a{
+        
+        background-color: var(--gray);
+        padding: 20px 60px;
+        width: 35px;
+        margin: auto;
+        border-bottom: 2px solid var(--green-background);
+        
+
+    }
+
+    #area{
+        height: 300px;
+    }
+
+    .testimonial{
+        height: 220px;
+        width:370px;
+        margin-left: 0px;
+    }
+
+    .cardImage{
+        width: 50%;
+      }
+
+
+
+    .loginSignup-con{
+        width: 80%;
+    }
+
+    #caro{
+        width: 100%;
+    }
+
+    #vat{
+        margin-left: 20px;
+    }
+
+    .login-con{
+        padding-top: 90px;
+    }
+
+    .admin{
+        margin-top: 80px;
+    }
+
+    .re{
+        
+        margin-top: 20px;
+        
+    }
+
+    
+
+    
+}
+

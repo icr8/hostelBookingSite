@@ -1,0 +1,943 @@
+:root{
+    --dark-blue: #000c37;
+    --white: #ffffff;
+    --white-gray: #e0e0e0;
+    --gold: #ff8a00;
+    --gray: #717171;
+    --green-background: #24ff00;
+    --green-text: #0c5d00;
+    --red-background: #ff9a9a;
+    --red-text: #ff0000;
+
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background: linear-gradient(to right,var(--white-gray), var(--white));
+}
+
+
+.signup-con h1{
+    margin-bottom: 20px;
+}
+
+
+#changeBtn{
+    color: white;
+    border-radius: 50px;
+    padding: 15px 40px;
+}
+
+.txt{
+    width: 30%;
+    padding: 15px 5px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+nav{
+    width: 100%;
+    background-color: var(--dark-blue);
+    padding: 10px;
+    display: inline-block;
+    
+}
+nav h1{
+    color: white;
+    
+}
+
+
+nav a{
+    float: right;
+    border-radius: 50px;
+    
+}
+.btn{
+    
+    padding: 8px 15px;
+    background-color: var(--dark-blue);
+    border:1.9px solid white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.btn:hover{
+    background-color: var(--gold);
+}
+
+
+.buttonsCon input{
+    color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+.row p{
+    color: var(--gold);
+}
+
+.body-container{
+    width: 90%;
+    margin: auto;
+
+}
+
+.onOffToggle-con{
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 10px;
+    
+}
+
+.onOffToggle{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    
+    
+}
+
+.sub{
+    color: white;
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+/* Styling for booking Success */
+.backNextContainer{
+    margin-top: 190px;
+}
+
+.bringTop{
+    margin-top: 20px;
+}
+
+.checkEmail{
+    color:var(--gold);
+
+}
+.center{
+    text-align: center;
+    padding-top: 200px;
+}
+
+/* Styling for user Dashbord */
+.noRadius{
+    border-radius: 0px;
+
+}
+
+.noRadius h1{
+    margin-left: 10px;
+}
+
+.navButtons{
+    
+    margin: 20px;
+}
+
+
+.layer{
+    
+    position: relative;
+    background: linear-gradient(to right,var(--white), var(--white-gray));
+    width: 80%;
+    height: 550px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.layer h2{
+    color: var(--dark-blue);
+    padding:10px 20px;
+}
+
+.navButtons a{
+    padding:10px 20px;
+    background-color: var(--dark-blue);
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+/* profile layer styling */
+
+.avatar{
+    background-color: #000c37;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    margin-top: 50px;
+}
+
+.avatar img{
+    width: 135px;
+    height: 135px;
+    border-radius: 65px;
+    margin-top: 2.3px;
+}
+
+.profileLayer h2,h3, h4{
+    margin-top: 20px;
+    
+}
+
+.bookingHistoryLayer{
+   
+    width: 100%;
+
+}
+
+.accomodationStatusLayer{
+    
+    width: 100%;
+}
+
+.profileLayer{
+    width: 100%;
+}
+
+.columns{
+    
+    align-items: center;
+    height: 50px;
+    color: var(--gold);
+    display: flex;
+    
+    border: 2px solid var(--dark-blue);
+    overflow: auto;
+}
+
+.heading1{
+    background-color: var(--white-gray);
+    color: var(--dark-blue);
+    font-size: medium;
+    width: 30%;
+    height: 40px;
+    font-weight: bold;
+    margin-right: 5px;
+    padding: 10px;
+    
+}
+
+.heading2{
+    background-color: var(--white-gray);
+    color: var(--dark-blue);
+    font-size: small;
+    width: 70%;
+    height: 40px;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+
+.recordData{
+    color: var(--dark-blue);
+    border-top: 0px;
+}
+
+.records{
+    height: 400PX;
+    overflow: auto;
+}
+
+
+.data{
+    color: var(--dark-blue);
+    margin: 20px 30px;
+    display: flex;
+}
+.data p{
+    padding: 5px;
+}
+.data h5{
+    
+    font-size: medium;
+    padding: 5px;
+}
+
+.status{
+    color: var(--dark-blue);
+    width: 80px;
+    height: 40px;
+    margin-left: 120px;
+    background-color: var(--gray);
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+    
+}
+.status p{
+    font-weight: bolder;
+}
+
+.expired{
+    background-color: var(--red-background);
+}
+
+.active{
+    background-color: var(--green-background);
+
+}
+
+.printBtn{
+    margin-left: 110px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* hostel Manager Dashboard styling  */
+.dashboard-con{
+    width: 100%;
+    
+}
+
+.card-con{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-left: 110px;
+    gap: 5%;
+}
+
+
+
+.card{
+    width: 35%;
+    height: 200px;
+    background-color: var(--green-background);
+    border-radius: 20px;
+    
+    margin-top: 20px;
+    
+    
+}
+
+
+
+.cardInfo{
+    width: 100%;
+    height: 70%;
+    padding: 50px 18px;
+    display: flex;
+    
+}
+
+.increase-width{
+    padding: 50px 70px;
+}
+
+.cardInfo p{
+    color: var(--dark-blue);
+    font-size: 4rem;
+    font-weight: bolder;
+    
+}
+
+.cardhead{
+    width: 100%;
+    height: 30%;
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+    padding: 20px 16px;
+}
+
+.cardhead h5{
+    color: var(--white);
+    font-size: large;
+    
+}
+
+.gender{
+    width: 80px;
+    height: 80px;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin-top: -20px;
+    
+}
+.female{
+    margin-left: 10px;
+}
+.gender h6{
+    background-color: var(--gold);
+    font-size:smaller;
+    color: var(--dark-blue);
+    height: 40px;
+    padding: 5px 2px;
+    
+}
+
+.gender p{
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+hr{
+    margin: 10px;
+}
+
+.roomAssigningAndUnkown-con{
+    display: flex;
+    margin-left: 60px;
+}
+
+.roomAssigning-con{
+    width: 45%;
+    height: 300px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+
+}
+.roomAssigning-con h5{
+    position: static;
+    font-size: large;
+    background-color: var(--gold);
+    
+}
+
+.verify{
+    padding-left: 42px;
+    background-color: var(--green-background);
+    
+}
+
+.roomTypeCon{
+    padding: 10px;
+}
+
+.roomType{
+    height: 54px;
+    margin-top: 5px;
+    
+}
+
+.roomTypeDetails{
+    display: flex;
+    height: 30px;
+
+}
+
+.roomTypeDetails h6{
+    background-color: var(--gray);
+    font-size: 70%;
+    height: inherit;
+    width: 30%;
+    padding: 7px 2px;
+}
+
+.roomTypeDetails p{
+    width: 20%;
+    color: var(--dark-blue);
+    font-weight: bolder;
+    height: inherit;
+    font-size: x-large;
+    padding: 0px 25px;
+    background-color: var(--green-background);
+}
+
+
+/* Verification page styling  */
+.verificationCon{
+    width: 100%;
+    
+    background: linear-gradient(to right,var(--white), var(--white-gray));
+    color: var(--dark-blue);
+    padding-left: 30px;
+    padding-bottom: 20px;
+    
+}
+
+.verificationDetails{
+    margin-left: 30%;
+    
+}
+
+.row{
+    display: flex;
+}
+
+.row p{
+    padding: 22px;
+    font-weight: bolder;
+}
+
+.buttonsCon{
+    display: flex;
+}
+.buttonsCon button{
+    margin-left: 60px;
+}
+
+.hidden{
+    display: none;
+}
+
+.skeleton{
+    animation: loading 1s infinite alternate;
+}
+
+@keyframes loading {
+    0%{
+        opacity: 30%;
+    }
+
+    50%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 40%;
+    }
+    
+}
+
+.skeletonVerificationDetails{
+    height: 500px;
+    width: 60%;
+    margin: auto;
+}
+
+.skeletonVerificationDetails, .skeletonbuttons, .skeletonTitle{
+    background-color: var(--white-gray);
+}
+
+
+
+/*reset styling */
+.resetBtn{
+    width: fit-content;
+    height: 35px;
+    background-color: var(--red-text);
+    color: var(--white);
+    font-weight: bolder;
+    margin: 20px 0px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    margin-left: 400px;
+    cursor: pointer;
+}
+
+.resetBtn:hover{
+    background-color: var(--red-background);
+}
+
+
+
+.resetBtn .tooltipText{
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 2px;
+    font-size: x-small;
+    position: absolute;
+    z-index: 1;
+    
+    left: 56%;
+    margin-left: -60px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.resetBtn:hover .tooltipText{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Error and success styling */
+.mes{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+.message{
+    width: fit-content;
+    height: 30px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    opacity: 60%;
+}
+
+.message p{
+    margin-top: 0px;
+}
+
+.error{
+    background-color: var(--red-background);
+    color: var(--red-text);
+}
+.success{
+    background-color: var(--green-background);
+    color: var(--green-text);
+}
+
+
+/* arhive styling */
+.searchBar{
+    width: 45%;
+    height: 60px;
+    margin: auto;
+    background-color: #000c37;
+    padding: 10px 0px;
+}
+
+.searchBox{
+    width: 70%;
+    height: 40px;
+    margin-left: 10px;
+    font-size: medium;
+}
+.searchBox::placeholder{
+    font-style: italic;
+}
+
+.searchBtn{
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.searchBtn:hover{
+    background-color: var(--gold);
+}
+
+
+/* settings page styling */
+
+.widthIncreaseToNinety{
+    width: 100%;
+    background-color: var(--gray);
+    padding-top: 10px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formCon{
+    width: 90%;
+    margin: auto;
+    color: var(--dark-blue);
+    font-size: medium;
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.formCon legend{
+    font-weight: bolder;
+    font-size: larger;
+    color: var(--white);
+    
+}
+
+.formCon label{
+    font-size: large;
+}
+
+.formCon input{
+    width: 100%;
+    font-size: large;
+    padding: 6px 10px;
+    font-weight: bold;
+}
+
+.settingsBtn{
+    width: 40%;
+    border: none;
+}
+.settingsBtn input{
+    border-radius: 20px;
+    border: 2px solid var(--white);
+    background-color: var(--dark-blue);
+    color: var(--white);
+    cursor: pointer;
+}
+.settingsBtn input:hover{
+    background-color: var(--gold);
+    
+    border: 2px solid var(--dark-blue);
+    
+}
+
+#cancel{
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+#edit{
+    width: 90%;
+    margin-bottom:20px ;
+    border-radius: 20px;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    
+}
+
+#edit:hover{
+    background-color: var(--gold);
+    cursor: pointer;
+}
+
+.editBtnCon{
+    width: 20%;
+    margin: auto;
+}
+
+
+
+
+/* Mobile responsive Portrait size  */
+@media all and (max-width: 729px) {
+    .summary{
+        text-align: center;
+    }
+
+    .summaryHead{
+        margin-top: 20px;
+    }
+    .makePayment{
+        margin-top: 150px;
+    }
+    .back{
+        margin-top: 120px;
+    }
+
+    /*Styling for booking success mobile*/
+    .bringTop{
+        margin-top: 5px;
+    }
+
+
+    /*Styling for user dashboard mobile*/
+    
+    .head-container h1{
+        font-size: 100%;
+    
+    }
+
+   .navButtons a{
+    display: block;
+    padding:5px 10px;
+    background-color: var(--dark-blue);
+    margin-left: 2px;
+    border-radius: 20px;
+    margin-bottom: 3px;
+    
+}
+
+.body-container{
+    width: 90%;
+    margin: auto;
+
+}
+
+.layer h3{
+    font-size: medium;
+}
+
+.status{
+    margin-left: 145px;
+}
+
+.printBtn{
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+
+/*  Hostel Manager dashboard mobile styling  */
+.dashboard-con{
+    height: fit-content;
+    padding-bottom: 10px;
+
+}
+
+.card-con{
+    flex-direction:column;
+    width: 100%;
+}
+
+.card{
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 15px;
+    
+}
+
+.cardhead{
+    width: 100%;
+}
+
+.cardInfo{
+    padding: 50px 70px;
+}
+
+.cardInfo p{
+    margin-left:  65px;
+}
+
+.gender{
+    margin-left: 30px;
+}
+
+.gender p{
+    margin-left: 0px;
+}
+.male p{
+    padding: 0px 12px;
+}
+
+.roomAssigningAndUnkown-con{
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.roomAssigning-con{
+    width: 90%;
+}
+
+/*  Verification page mobile styling  */
+.verify{
+    padding-left: 0px;
+   
+    
+}
+
+.roomTypeDetails h6{
+    
+    font-size: 70%;
+    
+    
+    padding: 0px 0px;
+}
+
+.roomTypeDetails p{ 
+    padding: 0px 0px;
+}
+
+
+.verificationDetails{
+    margin-left: 0%;
+    
+}
+
+.buttonsCon button{
+    margin-left: 10%;
+}
+
+.resetBtn{
+    margin-left: 0px;
+}
+
+
+/*  archive page mobile styling  */
+.searchBar{
+    width: 80%;
+}
+
+
+/* settings page mobile styling */
+.formCon{
+    margin-bottom: 10px;
+    padding: 5px;
+
+}
+
+.txt{
+    width: 80%;
+}
+
+.settingsBtn{
+    width: 70%;
+    
+}
+
+#edit{
+    width: 100%;
+    
+    
+}
+
+.editBtnCon{
+    width: 40%;
+    
+}
+
+.cardInfo{
+    padding: 50px ;
+}
+
+.increase-width{
+    padding: 60px 60px;
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+/*****  Ipad Responsiveness styling at 820px  ******/
+
+@media all and (max-width: 984px)  {
+    .layer{
+        width: 99%;
+    }
+    .body-container{
+        width: 90%;
+    }
+    .card-con{
+        width: 80%;
+        margin-left: 32px;
+    }
+    
+    .cardInfo{
+        width: 33%;
+    }
+    .cardhead{
+        width: 100%;
+    }
+
+    .resetBtn:hover .tooltipText{
+        visibility: hidden;
+        opacity: 1;
+    }
+
+}

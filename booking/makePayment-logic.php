@@ -114,13 +114,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
       
 
             // payment integration here
-            $test_public_key = "pk_test_9f451f9c3cbcb07114f16777d39017811b768b37";
-            $test_secret_key = "sk_test_69945a220a5c0dad82fd0520c2b3e26625054bda";
+            $test_public_key = "";
+            $test_secret_key = "";
             
-            $live_public_key = "pk_live_bff870ce038121a60a1cb4e7b4ad2f11da67a5f1";
-            $live_secret_key = "sk_live_13e2d44f358bf3570130923b07be8f808502cd80";
+            $live_public_key = "";
+            $live_secret_key = "";
             
-            $subAccount_code = "ACCT_kz10hxr73mzkfra";
+            $subAccount_code = "";
 
             $callback_url = "http://localhost:3000/booking/callback_handler.php";
 

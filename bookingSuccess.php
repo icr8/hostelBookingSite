@@ -1,5 +1,5 @@
 <?php
-    require '../userDashboard-logic.php';
+    require 'userDashboard-logic.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +19,9 @@
             <p class="checkEmail">Check your Email for your room details <br> or click</p>
             
         </div>
-
-        <center><a  class="btn makePayment bringTop" href="userDashboard.php" >CHECK ROOM DETAILS</a></center>
-        <div class="backNextContainer"><center><a href="index.php" class="btn back">HOME</a></center></div>
+        <br>
+        <center><a  class="btn makePayment bringTop" href="userDashboard.php" >Check Room Details at Dashboard</a></center>
+        <div class="backNextContainer"><center><a href="index.php?id=<?= $_SESSION['user-id']?>" class="btn back">HOME</a></center></div>
     </main>
 
 </body>

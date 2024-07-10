@@ -62,6 +62,7 @@ require 'config/constants.php';
       </form>
 
  <p> Don't have an account? <a href="signup.php">Register</a></p>
+ <a href="index.php" id="sbutt">Home</a>
 
  <p id="lip"> BARA CREATIONS</p>
 

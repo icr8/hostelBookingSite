@@ -53,8 +53,10 @@
         <input name="username_email" class="fin" type="text|email" placeholder="Username or Email" value="<?=$username_email?>"> <br>
         <input name="password" class="fin" type="password" placeholder="Password" value="<?=$password?>"><br>
         <input type="submit" id="sbutt" name="submit" value="Login"/><br><br>
+        
 
       </form>
+      <a href="index.php" id="sbutt">Home</a>
 
  <p> Don't have an account? <a href="mailto:emmanuelagyemang12345@gmail.com">Email us</a></p>
 

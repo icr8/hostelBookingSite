@@ -7,7 +7,7 @@
             <center><a href="#profile" class="btn">Profile</a>
             <a href="#accommodation"  class="btn">Accommodation Status</a>
             <a href="#booking" class="btn">Booking History</a>
-            <a href="index.php" class="btn">Home</a></center>
+            <a href="index.php?id=<?= $_SESSION['user-id']?>" class="btn">Home</a></center>
         
     </div>
 
@@ -160,7 +160,7 @@
 
                     <?php else : ?>
 
-                        <center><h3><?= $message2 ?></i></h3></center>
+                        
 
                 
 

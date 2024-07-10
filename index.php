@@ -1,6 +1,17 @@
 <?php
 
+
+
 require "config/database.php";
+
+if(isset($_GET['id'])){
+
+$userId = $_GET['id'];
+}else{
+
+}
+
+
 
   $topHostelsQuery = "SELECT hostelId, hostelName, hostelLocation, hostelDistance FROM hostels WHERE  isTop = 1";
   $topHostelsResult = mysqli_query($connection, $topHostelsQuery);
@@ -32,11 +43,21 @@ require "config/database.php";
             <button><img id="closeBtn" src="pictures/close.png" width="40px" height="40px" alt="menu"></button>  
           </div>
         
+          <?php if(isset($userId)) : ?>
+          <div class="menulist">
+            <a id="lif" href="index.php">Home</a>
+            <a id="lif" href="SignUp.php">Signup</a>
+            <a id="lif" href="userDashboard.php">Dashboard</a>
+            <a id="lif" href="logout.php">Logout</a>
+          </div>
+
+          <?php else : ?>
           <div class="menulist">
             <a id="lif" href="index.php">Home</a>
             <a id="lif" href="SignUp.php">Signup</a>
             <a id="lif" href="gettingStarted.php">Login</a>
           </div>
+          <?php endif ?>
         </div>
         
       </nav>
@@ -70,8 +91,11 @@ require "config/database.php";
         <img id="caro" src="pictures/<?= $image['hostelPic1'] ?>" width="300px" height="200px"  alt="Top Hostel Image">
       </div>
 
+
       <div class="CardDetails">
-      <h3 class="hostelName"><?= $topHostels['hostelName'] ?></h3>
+
+      <?php if(isset($topHostels)) : ?>
+        <h3 class="hostelName"><?= $topHostels['hostelName'] ?></h3>
        
           <div class="inCard">
               <p class="author">LOCATION: </p>
@@ -82,21 +106,43 @@ require "config/database.php";
               <p class="author value"><?= $topHostels['hostelDistance'] ?></p>
           </div>
 
+      <?php else : ?>
+
+        <h3 class="hostelName"></h3>
+       
+          <div class="inCard">
+              <p class="author">LOCATION: </p>
+              <p class="author value"></p>
+          </div>
+          <div class="inCard">
+              <p class="author">DISTANCE:</p>
+              <p class="author value"></p>
+          </div>
+      
+      <?php endif ?>
+
         <?php
           
           $lowPriceQuery = "select price from room where hostelId = $hostelId AND roomType = 4";
           $lowPriceResult = mysqli_query($connection, $lowPriceQuery);
           $lowPrice = mysqli_fetch_assoc($lowPriceResult);
 
-          $highPriceQuery = "select price from room where hostelId = $hostelId AND roomType = 1";
+          $highPriceQuery = "SELECT price FROM room WHERE hostelId = $hostelId AND roomType = 1";
           $highPriceResult = mysqli_query($connection, $highPriceQuery);
           $highPrice = mysqli_fetch_assoc($highPriceResult);
         ?>
 
 
           <div class="inCard">
+            
+          <?php if(isset($highPrice,$lowPrice)) : ?>
+
               <p class="author">PRICE RANGE: </p>
               <p class="author value">GH&cent; <?= $lowPrice['price'] ?> - <?= $highPrice['price'] ?></p>
+              <?php else : ?>
+                <p class="author">PRICE RANGE: </p>
+                <p class="author value">GH&cent; Unassigned - Unassigned</p>
+              <?php endif ?>
           </div>
         
       </div>

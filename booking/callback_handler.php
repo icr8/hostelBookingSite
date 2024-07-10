@@ -77,11 +77,7 @@ $ref = $_GET['reference'];
           $insertTransactionQuery ->bind_param("isiidisss", $transactionIdM, $status, $bookerIdM, $hostelIdinMsgM, $amountM, $receiptNumberM, $reference, $paymentMethod, $transactionDate);
           
           $insertTransactionQuery->execute();
-          $transactionRecord = $insertTransactionQuery->execute();
          
-
-          if($transactionRecord == true){
-
 
             //inserting into booking
             $insertbookingQuery = $connection->prepare("INSERT INTO booking ( userId, hostelId, transactionId, roomType) VALUES(?, ?, ?, ?) " );
@@ -90,37 +86,42 @@ $ref = $_GET['reference'];
             $insertbookingQuery->execute();
             $bookingRecord = $insertbookingQuery->execute();
     
-            if($bookingRecord == true){
+            if(!mysqli_errno($connection)){
 
               //Take user to success page
               header('Location: ' . '../bookingSuccess.php');
                 die();
-    
-            }else{
+              }else{
 
-            $_SESSION['booking-error']= "There was problem saving your booking data. contact developer";
-            header('Location: ' . 'booking.php?id='. $hostelIdinMsgM);
-                die();
+                //get developer contact
+                $contactQuery = "SELECT contact FROM developers where developersId = 1";
+                $contactResult = mysqli_query($connection, $contactQuery);
 
-            }
+                $contactRecord = mysqli_fetch_assoc($contactResult);
+                $contact = $contactRecord['contact'];
+
+                $_SESSION['booking-error']= "There was a problem in saving your Transaction data. Please contact Developer (".$contact.")!";
+             header('Location: ' . 'booking.php?id='. $hostelIdinMsgM);
+               die();
+              }
     
-            
+             
     
-          }
-          else{
+          
+
+          
+    
+        }
+        else{
     
     
-            $_SESSION['booking-error']= "There was problem saving your transaction data. contact developer";
+            $_SESSION['booking-error']= "The transaction failed. Try again!";
              header('Location: ' . 'booking.php?id='. $hostelIdinMsgM);
                die();
     
           }
-          
     
         }
-    
-        }
-
         else{
           // log the response for debugging
           error_log("unexpected API response: " . $response);

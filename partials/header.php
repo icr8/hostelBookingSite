@@ -20,7 +20,9 @@ $title = "Dashboard";
         <nav class="head-container noRadius">
             <h1>Dashboard | Welcome <?= $userName?>!</h1>
             <div class="username-con">
-            <a href="userLogout.php" class="btn">Logout</a>
+                <a href="hostels.php" class="btn">Hostels</a>
+                <a href="userDashboard.php" class="btn">Go to Dashboard</a>
+                <a href="index.php?id=<?= $_SESSION['user-id']?>" class="btn">Logout</a>
             </div>
             
             

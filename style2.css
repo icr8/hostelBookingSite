@@ -74,7 +74,7 @@ a{
 }
 
 .menumain{
-    margin-left: 60%;
+    margin-left: 40%;
 }
 
 .menu{
@@ -278,7 +278,7 @@ padding: 40px 0px;
     width:600px;
     display: none;
     gap: 5px;
-    margin-left: 350px;
+    margin-left: 300px;
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
@@ -631,7 +631,7 @@ border-color: var(--dark-blue);
     .menulist a{
         
         background-color: var(--gray);
-        padding: 20px 60px;
+        padding: 20px 90px;
         width: 35px;
         margin: auto;
         border-bottom: 2px solid var(--green-background);
@@ -686,3 +686,21 @@ border-color: var(--dark-blue);
     
 }
 
+
+
+/*Ipad responsiveness*/
+@media all  and (Max-width: 820px) {
+    .menumain{
+    
+        margin-left:20%;
+       
+    }
+
+    .testimonial{
+        height: 360px;
+        width:470px;
+        margin-left: 130px;
+    }
+
+
+}

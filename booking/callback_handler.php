@@ -1,6 +1,7 @@
 <?php
 
-
+//Paystack keys
+$test_secret_key = "";
 
 
 //getting the reference from the url
@@ -59,6 +60,7 @@ $ref = $_GET['reference'];
           $amountM = doubleval($amount/100);
           $paymentMethod = $tResults->data->channel;
           $receiptNumber = $tResults->data->id;
+          $receiptNumberM = intval($receiptNumber);
           $hostelIdinMsg = $tResults->data->metadata->hostelId;
           $bookerId = $tResults->data->metadata->bookerId;
           $bookerIdM = intval($bookerId);
@@ -72,7 +74,7 @@ $ref = $_GET['reference'];
           require 'config/database.php';
     
           $insertTransactionQuery = $connection->prepare("INSERT INTO transactions (transactionId, transactionStatus, userId, hostelId, amount, receiptNumber, reference, paymentMethod, transactionDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " );
-          $insertTransactionQuery ->bind_param("isiidssss", $transactionIdM, $status, $bookerIdM, $hostelIdinMsgM, $amountM, $receiptNumber, $reference, $paymentMethod, $transactionDate);
+          $insertTransactionQuery ->bind_param("isiidisss", $transactionIdM, $status, $bookerIdM, $hostelIdinMsgM, $amountM, $receiptNumberM, $reference, $paymentMethod, $transactionDate);
           
           $insertTransactionQuery->execute();
           $transactionRecord = $insertTransactionQuery->execute();

@@ -61,7 +61,7 @@ require 'config/constants.php';
 
       </form>
 
- <p> Don't have an account? <a href="mailto:barasolutions24@gmail.com">Email us</a></p>
+ <p> Don't have an account? <a href="signup.php">Register</a></p>
 
  <p id="lip"> BARA CREATIONS</p>
 

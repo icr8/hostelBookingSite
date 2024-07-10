@@ -113,11 +113,15 @@
                     </div>
                 </div>
                 
+                <!-- 
+                I will include this function later
+                
+                **Hostel admin use this go online or offline**
                 <form class="onOffToggle-con">
                     <input class="onOffToggle" type="Radio" name="onOff" value="1"><span>Go Online</span><br>
                     <input class="onOffToggle" type="Radio" name="onOff" value="0"><span>Go Offline</span><br>
                     <input class="btn sub" type="submit" name="sub" value="Update" >
-                </form>
+                </form> -->
 
                 <hr>
 

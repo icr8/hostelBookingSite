@@ -59,7 +59,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             curl_setopt($ch,CURLOPT_POST, true);
             curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                "Authorization: Bearer your_key",
+                "Authorization: Bearer your key",
                 "Cache-Control: no-cache",
             ));
             
@@ -114,11 +114,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
       
 
             // payment integration here
-            $test_public_key = "";
-            $test_secret_key = "";
             
-            $live_public_key = "";
-            $live_secret_key = "";
             
             $subAccount_code = "";
 

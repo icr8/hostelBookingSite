@@ -3,9 +3,10 @@ require 'config/database.php';
 
 
 
-if(isset($_SESSION['user-id'])){
+if(isset($_SESSION['hostel-id'])){
 
-    $hostelId = $_SESSION['user-id'] ;
+    $hostelId = $_SESSION['hostel-id'];
+    $hostelId = intval($hostelId);
 
     /* COunting male users */
     $query3 = "SELECT count(*) AS male FROM room WHERE hostelId = '$hostelId' AND  roomGender = 'male' AND occupiedBeds < 4";

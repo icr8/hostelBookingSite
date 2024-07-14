@@ -30,7 +30,7 @@ $hostelName = $hostelNam['hostelName'];
         <nav class="head-container noRadius">
             <h1 id="pageTitle">Dashboard | <?= $hostelName ?> </h1>
             <div class="username-con">
-                <a href="/logout.php" class="btn">Logout</a>
+                <a href="/adminlogout.php" class="btn">Logout</a>
             </div>
             
             

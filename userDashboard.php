@@ -1,6 +1,10 @@
 <?php
     include "partials/header.php";
+
+   
 ?>
+
+
 
 <div class="navButtons">
             
@@ -200,3 +204,7 @@
 <script defer src="action.js"></script>
 </body>
 </html>
+
+
+
+

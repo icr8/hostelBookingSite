@@ -28,7 +28,7 @@ body{
     width: 100%;
     min-height: 400px;
     
-    background-image: url("pictures/6.webp");
+    background-image: url("pictures/icons/heroImg.webp");
     background-color: var(--dark-blue);
     background-blend-mode: soft-light;
     background-position: center;

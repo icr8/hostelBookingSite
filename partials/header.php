@@ -22,7 +22,7 @@ $title = "Dashboard";
             <div class="username-con">
                 <a href="hostels.php" class="btn">Hostels</a>
                 <a href="userDashboard.php" class="btn">Go to Dashboard</a>
-                <a href="index.php?id=<?= $_SESSION['user-id']?>" class="btn">Logout</a>
+                <a href="index.php?id=<?= $_SESSION['hostel-id']?>" class="btn">Logout</a>
             </div>
             
             

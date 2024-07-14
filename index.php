@@ -35,18 +35,18 @@ $userId = $_GET['id'];
   <header>
     <div id="wrapper-div">
       <nav class="nav-bar">
-        <img id="pic" src="pictures/pic.jpg" width="60px" height="60px" alt="logo">  
+        <img id="pic" src="pictures/icons/baraLogo.jpg" width="60px" height="60px" alt="logo">  
         
         <div class="menumain">
           <div class="menu" > 
-            <button><img id="menuBtn" src="pictures/menu.png" width="50px" height="50px" alt="menu"></button>  
-            <button><img id="closeBtn" src="pictures/close.png" width="40px" height="40px" alt="menu"></button>  
+            <button><img id="menuBtn" src="pictures/icons/menu.png" width="50px" height="50px" alt="menu"></button>  
+            <button><img id="closeBtn" src="pictures/icons/close.png" width="40px" height="40px" alt="menu"></button>  
           </div>
         
           <?php if(isset($userId)) : ?>
           <div class="menulist">
             <a id="lif" href="index.php">Home</a>
-            <a id="lif" href="SignUp.php">Signup</a>
+            
             <a id="lif" href="userDashboard.php">Dashboard</a>
             <a id="lif" href="logout.php">Logout</a>
           </div>
@@ -200,9 +200,9 @@ $userId = $_GET['id'];
 
   <div id="foot">
     <center>
-    <img id="tes" src="pictures/images.png" alt="facebook">&nbsp;&nbsp;&nbsp;&nbsp; 
-    <img id="tes" src="pictures/images (1).png" alt="whatsapp">&nbsp;&nbsp;&nbsp;&nbsp; 
-    <img id="tes" src="pictures/ins.jpeg" alt="Instagram"><br>
+    <img id="tes" src="pictures/icons/facebook.png" alt="facebook">&nbsp;&nbsp;&nbsp;&nbsp; 
+    <img id="tes" src="pictures/icons/whatsapp.png" alt="whatsapp">&nbsp;&nbsp;&nbsp;&nbsp; 
+    <img id="tes" src="pictures/icons/instagram.jpeg" alt="Instagram"><br>
     <P id="con">   CONTACT US: </P>
     <p id="con1">  &nbsp;&nbsp;  0507864170 <br><br>&nbsp;&nbsp;&nbsp;&nbsp; barasolutions24@gmail.com</p>
      <br><br>&nbsp;&nbsp;&nbsp;&nbsp; 

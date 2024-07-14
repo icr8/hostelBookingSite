@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
             if(password_verify($password, $db_password)){
                 
                 //set session for access control
-                $_SESSION['user-id'] = $user_record['hostelId'];
+                $_SESSION['hostel-id'] = $user_record['hostelId'];
                 
 
                 //log user in

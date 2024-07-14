@@ -5,5 +5,5 @@
  //destroy all sessions and redirect to login page
  session_destroy();
 
- header('location: ' . 'adminLogin.php');
+ header('location: ' . 'index.php');
  die();

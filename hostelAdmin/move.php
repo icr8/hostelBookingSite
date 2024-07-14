@@ -6,6 +6,8 @@ include'./partials/header.php';
         
 if(isset($_POST['reset'])){
 
+ 
+
       //getting all assigned users from database and placing them in the archive page
   $approvedQuery = "SELECT b.bookingDate, u.firstName, u.lastName, u.email, r.roomType, r.roomName, r.price FROM booking b INNER JOIN users u ON b.userId = u.userId INNER JOIN room r ON b.roomId = r.roomId WHERE b.hostelId = $hostelId AND b.verified = 1 ORDER BY bookingDate DESC";
   $approvedResult = mysqli_query($connection, $approvedQuery);
@@ -22,15 +24,21 @@ if(isset($_POST['reset'])){
         $roomName = $approvedResult2['roomName'];
         $price = $approvedResult2['price'];
         $email = $approvedResult2['email'];
-    
+        
+        //send old booking to archives
         $moveToArchiveQuery = $connection->prepare("INSERT INTO archive (bookingDate, hostelId, CustomerName, roomType, roomName, price, email) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $moveToArchiveQuery->bind_param("sisisds", $bookingDate, $hostelId, $customerName, $roomType, $roomName, $price, $email);
         $moveToArchiveQuery->execute();
 
-        $archiveKey = 2;
-        $clearActiveCusQuery = $connection->prepare("UPDATE booking Set verified = ? WHERE hostelId = $hostelId");  
-        $clearActiveCusQuery->bind_param("i", $archiveKey);
-        $clearActiveCusQuery->execute();
+        //clear old booking data
+        $clearOldbookingQuery = $connection->prepare("DELETE FROM `booking` WHERE hostelId = ?");  
+        $clearOldbookingQuery -> bind_param("i", $hostelId);
+        $clearOldbookingQuery -> execute();
+
+        //clear old transaction data
+        $clearOldtransactionQuery = $connection->prepare("DELETE FROM `transactions` WHERE hostelId = ?");  
+        $clearOldtransactionQuery -> bind_param("i", $hostelId);
+        $clearOldtransactionQuery -> execute();
 
 
         //reset occupied beds to 0

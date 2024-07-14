@@ -1,15 +1,10 @@
 <?php
 
-//Paystack keys
-$test_secret_key = "";
 
-
-//getting the reference from the url
-$ref = $_GET['reference'];
 
 //verify payment function
 
- //function verifyPayment($ref, $test_secret_key){
+ function verifyPayment($ref, $test_secret_key){
 
   
 
@@ -53,8 +48,7 @@ $ref = $_GET['reference'];
         if($tResults->status && $check == "success"){
 
           $status = $tResults->data->status;
-          $transactionId = $tResults->data->customer->id;
-          $transactionIdM =intval($transactionId);
+          
           $reference = $tResults->data->reference;
           $amount = $tResults->data->amount;
           $amountM = doubleval($amount/100);
@@ -68,23 +62,42 @@ $ref = $_GET['reference'];
           $roomTypeM = intval($roomType);
           $hostelIdinMsgM = intval($hostelIdinMsg);
           $transactionDate = $tResults->data->paid_at;
+
+          //Including database
+          require 'config/database.php';
+
+          
     
           // if payment successful, insert transaction and booking here
-          
-          require 'config/database.php';
-    
-          $insertTransactionQuery = $connection->prepare("INSERT INTO transactions (transactionId, transactionStatus, userId, hostelId, amount, receiptNumber, reference, paymentMethod, transactionDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) " );
-          $insertTransactionQuery ->bind_param("isiidisss", $transactionIdM, $status, $bookerIdM, $hostelIdinMsgM, $amountM, $receiptNumberM, $reference, $paymentMethod, $transactionDate);
-          
+     
+          //inserting into transactions
+          $insertTransactionQuery = $connection->prepare("INSERT INTO transactions ( transactionStatus, userId, hostelId, amount, receiptNumber, reference, paymentMethod, transactionDate) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?) " );
+          $insertTransactionQuery ->bind_param("siidisss", $status, $bookerIdM, $hostelIdinMsgM, $amountM, $receiptNumberM, $reference, $paymentMethod, $transactionDate);
           $insertTransactionQuery->execute();
          
+          //retrieving transaction id
+          $getTransactionIdQuery = $connection->prepare("SELECT * FROM transactions WHERE hostelId = ? AND userId = ?");  
+          $getTransactionIdQuery->bind_param("ii", $hostelIdinMsgM, $bookerIdM);  
+          $transactionIdResult = $getTransactionIdQuery->execute();  
+
+          if ($transactionIdResult) {  
+              $result = $getTransactionIdQuery->get_result();  
+              $transId = $result->fetch_assoc();  
+              if ($transId) {  
+                  $transactionId = $transId['transactionId'];  
+                  $transactionId = intval($transactionId);  
+              } else {  
+        echo "No transaction found for the given criteria.";  
+    }  
+} else {  
+    echo "Failed to execute selection of transaction Id";  
+}  
 
             //inserting into booking
             $insertbookingQuery = $connection->prepare("INSERT INTO booking ( userId, hostelId, transactionId, roomType) VALUES(?, ?, ?, ?) " );
-            $insertbookingQuery->bind_param("iiii", $bookerIdM, $hostelIdinMsgM, $transactionIdM, $roomTypeM);
-
+            $insertbookingQuery->bind_param("iiii", $bookerIdM, $hostelIdinMsgM, $transactionId, $roomTypeM);
             $insertbookingQuery->execute();
-            $bookingRecord = $insertbookingQuery->execute();
+            
     
             if(!mysqli_errno($connection)){
 
@@ -132,13 +145,17 @@ $ref = $_GET['reference'];
       
     }
 
-//  }
+  }
 
+      //Paystack keys
+    $test_secret_key = "";
 
-   
+    //getting the reference from the url
+    $ref = $_GET['reference'];
+      
 
     //calling the verify transaction function
-    //verifyPayment($ref, $test_secret_key);
+    verifyPayment($ref, $test_secret_key);
 
 
     
